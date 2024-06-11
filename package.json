@@ -1,0 +1,19 @@
+{
+  "name": "adb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "adbkit": "^2.11.1",
+    "xml-js": "^1.6.11",
+    "xml2js": "^0.6.2"
+  }
+}
