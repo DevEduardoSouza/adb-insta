@@ -1,0 +1,1 @@
+# função para clicar em um elemento pelo resource-id

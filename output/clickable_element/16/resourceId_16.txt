@@ -1,0 +1,2 @@
+Resource ID: com.instagram.android:id/creation_tab
+Bounds: [288,1214] - [432,1280]

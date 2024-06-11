@@ -1,0 +1,2 @@
+Resource ID: com.instagram.android:id/media_option_button
+Bounds: [654,308] - [720,380]

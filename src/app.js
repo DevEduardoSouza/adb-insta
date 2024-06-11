@@ -3,15 +3,14 @@ import openApp from "./commands/openApp.js";
 import parseXML from "xml2js";
 import fs from "fs";
 
-import {
-  tapElementByResourceId,
-} from "./utils/utils.js";
+import { tapElementByResourceId } from "./utils/utils.js";
 import clickAtPosition from "./commands/click.js";
 import dumpWindowLayout from "./commands/dumpWindowLayout.js";
 import typeText from "./commands/typeText.js";
 
 import { delay } from "./utils/delay.js";
 import { isElementPresentByResourceId } from "./utils/isElementPresentByResourceId.js";
+import { captureClickableElements } from "./utils/captureClickableElements.js";
 
 const packageName = "com.instagram.android";
 const activityName = "com.instagram.mainactivity.LauncherActivity";
@@ -43,17 +42,21 @@ client
 
     if (loginSuccessful) {
       await delay(1000);
-
       await tapElementByResourceId(
         device.id,
         "com.instagram.android:id/search_tab"
       );
 
-      const bounds = tapElementByResourceId(
+      await delay(1000);
+      await tapElementByResourceId(
         device.id,
-        "com.instagram.android:id/search_tab"
+        "com.instagram.android:id/action_bar"
       );
-      console.log(bounds);
+
+      await delay(1000);
+      await typeText(device.id, "#casa");
+
+      // await captureClickableElements(xmlDumpPath, 'screenshot.png', 'output/clickable_element')
     } else {
       console.log("Fazendo Login");
       await clickAtPosition(device.id, 24.66, 876.748);

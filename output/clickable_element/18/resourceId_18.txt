@@ -1,0 +1,2 @@
+Resource ID: com.instagram.android:id/profile_tab
+Bounds: [576,1214] - [720,1280]
