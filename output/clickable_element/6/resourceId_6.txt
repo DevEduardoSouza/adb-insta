@@ -1,2 +1,2 @@
-Resource ID: com.instagram.android:id/row_feed_photo_profile_name
-Bounds: [74,305] - [654,343]
+Resource ID: 
+Bounds: [24,712] - [696,778]

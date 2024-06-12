@@ -1,2 +1,0 @@
-Resource ID: com.instagram.android:id/clips_tab
-Bounds: [432,1214] - [576,1280]

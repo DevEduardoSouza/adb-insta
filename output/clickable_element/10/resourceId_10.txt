@@ -1,2 +1,0 @@
-Resource ID: com.instagram.android:id/action_bar
-Bounds: [0,36] - [720,120]

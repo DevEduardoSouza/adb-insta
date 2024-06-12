@@ -1,2 +1,0 @@
-Resource ID: com.instagram.android:id/media_group
-Bounds: [0,383] - [720,1214]

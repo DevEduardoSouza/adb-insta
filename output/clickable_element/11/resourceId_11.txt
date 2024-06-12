@@ -1,2 +1,0 @@
-Resource ID: 
-Bounds: [24,61] - [186,120]

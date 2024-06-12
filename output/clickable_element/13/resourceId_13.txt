@@ -1,2 +1,0 @@
-Resource ID: com.instagram.android:id/action_bar_inbox_button
-Bounds: [636,36] - [708,120]

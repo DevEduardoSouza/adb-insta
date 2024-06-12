@@ -1,2 +1,2 @@
-Resource ID: com.instagram.android:id/outer_container
-Bounds: [6,120] - [165,304]
+Resource ID: 
+Bounds: [24,54] - [696,1259]

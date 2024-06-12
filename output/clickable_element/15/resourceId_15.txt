@@ -1,2 +1,0 @@
-Resource ID: com.instagram.android:id/search_tab
-Bounds: [144,1214] - [288,1280]

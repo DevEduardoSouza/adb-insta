@@ -1,2 +1,0 @@
-Resource ID: com.instagram.android:id/feed_tab
-Bounds: [0,1214] - [144,1280]

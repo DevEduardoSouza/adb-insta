@@ -11,10 +11,15 @@ import typeText from "./commands/typeText.js";
 import { delay } from "./utils/delay.js";
 import { isElementPresentByResourceId } from "./utils/isElementPresentByResourceId.js";
 import { captureClickableElements } from "./utils/captureClickableElements.js";
+import { searchInExplore } from "./instaTools/searchInExplore.js";
+import  { tapElementByContentDesc } from "./commands/tapElementByContentDesc.js";
+import login from "./instaTools/login.js";
+import { accounts } from "../data/accounts.js";
 
 const packageName = "com.instagram.android";
 const activityName = "com.instagram.mainactivity.LauncherActivity";
 const xmlDumpPath = "./src/sdcard/window_dump.xml";
+const user = accounts[0]
 
 client
   .listDevices()
@@ -40,36 +45,15 @@ client
     );
     await delay(1000);
 
-    if (loginSuccessful) {
-      await delay(1000);
-      await tapElementByResourceId(
-        device.id,
-        "com.instagram.android:id/search_tab"
-      );
-
-      await delay(1000);
-      await tapElementByResourceId(
-        device.id,
-        "com.instagram.android:id/action_bar"
-      );
-
-      await delay(1000);
-      await typeText(device.id, "#casa");
-
-      // await captureClickableElements(xmlDumpPath, 'screenshot.png', 'output/clickable_element')
+    if (false) {
+      await searchInExplore(device.id, "#casa");
     } else {
-      console.log("Fazendo Login");
-      await clickAtPosition(device.id, 24.66, 876.748);
-      await delay(500);
-      await typeText(device.id, "camilo_box_");
-
-      await clickAtPosition(device.id, 24.766, 876.854);
-      await delay(500);
-      await typeText(device.id, "edu2023ardo");
-
-      await delay(500);
-      // const position = getPositionElement(xmlDumpPath, 4);
-      await clickAtPosition(device.id, position.x, position.y);
+      await login(device.id, user)
+      // await captureClickableElements(
+      //   xmlDumpPath,
+      //   "screenshot.png",
+      //   "output/clickable_element"
+      // );
     }
   })
   .catch((err) => {
